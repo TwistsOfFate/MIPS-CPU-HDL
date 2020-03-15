@@ -1,0 +1,16 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+D:/Xilinx/projects/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+D:/Xilinx/projects/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sim_1/new/cpu_tb.sv,1583749602,systemVerilog,,,,cpu_tb,,,,,,,,
+D:/Xilinx/projects/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/adder.sv,1583712950,systemVerilog,,D:/Xilinx/projects/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/alu.sv,,adder,,,,,,,,
+D:/Xilinx/projects/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/alu.sv,1583713072,systemVerilog,,D:/Xilinx/projects/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/control.sv,,alu,,,,,,,,
+D:/Xilinx/projects/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/control.sv,1583727273,systemVerilog,,D:/Xilinx/projects/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/dmem.sv,,control,,,,,,,,
+D:/Xilinx/projects/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/dmem.sv,1583748590,systemVerilog,,D:/Xilinx/projects/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/imem.sv,,dmem,,,,,,,,
+D:/Xilinx/projects/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/imem.sv,1583748564,systemVerilog,,D:/Xilinx/projects/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mips.sv,,imem,,,,,,,,
+D:/Xilinx/projects/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mips.sv,1583748713,systemVerilog,,D:/Xilinx/projects/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mux2.sv,,mips,,,,,,,,
+D:/Xilinx/projects/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mux2.sv,1583714675,systemVerilog,,D:/Xilinx/projects/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/pcounter.sv,,mux2,,,,,,,,
+D:/Xilinx/projects/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/pcounter.sv,1583713644,systemVerilog,,D:/Xilinx/projects/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/regfile.sv,,pcounter,,,,,,,,
+D:/Xilinx/projects/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/regfile.sv,1583710321,systemVerilog,,D:/Xilinx/projects/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/signext.sv,,regfile,,,,,,,,
+D:/Xilinx/projects/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/signext.sv,1583711979,systemVerilog,,D:/Xilinx/projects/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sim_1/new/cpu_tb.sv,,signext,,,,,,,,

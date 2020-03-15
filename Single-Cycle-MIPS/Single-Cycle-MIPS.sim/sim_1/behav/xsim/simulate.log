@@ -1,0 +1,7 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+========== Test: factorial ==========
+WARNING: file D:/Xilinx/projects/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sim_1/new/factorial/factorial.data could not be opened
+========== In init ==========
+         25 instructions in total
+========== In runtime checker ==========
