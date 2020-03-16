@@ -27,14 +27,14 @@ module dmem(
     output logic [31:0] rd
     );
     
-    logic [31:0] RAM[255:0];
+    logic [31:0] RAM[127:0];
     
     integer i;   
     
     always_ff @(negedge clk or posedge reset)
     begin
         if (reset)
-            for (i=0;i<256;++i)
+            for (i=0;i<128;++i)
                 RAM[i] <= 0;
         else if (we)
             RAM[a[31:2]] <= wd;

@@ -2,7 +2,7 @@ Vivado Simulator 2018.3
 Time resolution is 1 ps
 ========== Test: test1 ==========
 ========== In init ==========
-          4 instructions in total
+          7 instructions in total
 ========== In runtime checker ==========
 cycle 1: pc = 0x0
 a1 = 00000b, a2 = 10010b, rd1 = 0x0, rd2 = 0x0
@@ -10,7 +10,7 @@ R[17] = 0x0, R[18] = 0x0, R[19] = 0x0
 a3 = 10010b, we3 = 1, wd3 = 0x4
 mips.WriteData = 0x0, writedata = 0x0
 SrcA = 0x0, SrcB = 0x4, alu.y = 0x00000004, ALUControl = 010
-control.Out = 101001b
+control.Out = 1010010b
 dmem.rd = 0x4
  
 cycle 2: pc = 0x4
@@ -19,25 +19,43 @@ R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
 a3 = 10011b, we3 = 1, wd3 = 0x8
 mips.WriteData = 0x0, writedata = 0x0
 SrcA = 0x0, SrcB = 0x8, alu.y = 0x00000008, ALUControl = 010
-control.Out = 101001b
+control.Out = 1010010b
 dmem.rd = 0x8
  
 cycle 3: pc = 0x8
-a1 = 10010b, a2 = 10011b, rd1 = 0x4, rd2 = 0x8
+a1 = 00000b, a2 = 10100b, rd1 = 0x0, rd2 = 0x0
 R[17] = 0x0, R[18] = 0x4, R[19] = 0x8
-a3 = 10001b, we3 = 1, wd3 = 0xc
-mips.WriteData = 0x8, writedata = 0x8
-SrcA = 0x4, SrcB = 0x8, alu.y = 0x0000000c, ALUControl = 010
-control.Out = 110000b
-dmem.rd = 0xc
+a3 = 10100b, we3 = 1, wd3 = 0x8
+mips.WriteData = 0x0, writedata = 0x0
+SrcA = 0x0, SrcB = 0x8, alu.y = 0x00000008, ALUControl = 010
+control.Out = 1010010b
+dmem.rd = 0x8
  
 cycle 4: pc = 0xc
-a1 = 00000b, a2 = 10001b, rd1 = 0x0, rd2 = 0xc
-R[17] = 0xc, R[18] = 0x4, R[19] = 0x8
+a1 = 10010b, a2 = 10011b, rd1 = 0x4, rd2 = 0x8
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x8
+a3 = 10001b, we3 = 1, wd3 = 0xfffffffc
+mips.WriteData = 0x8, writedata = 0x8
+SrcA = 0x4, SrcB = 0x8, alu.y = 0xfffffffc, ALUControl = 110
+control.Out = 1100000b
+dmem.rd = 0xxxxxxxxx
+ 
+cycle 5: pc = 0x10
+a1 = 00000b, a2 = 00000b, rd1 = 0x0, rd2 = 0x0
+R[17] = 0xfffffffc, R[18] = 0x4, R[19] = 0x8
+a3 = 00000b, we3 = 0, wd3 = 0xxxxxxxxx
+mips.WriteData = 0x0, writedata = 0x0
+SrcA = 0x0, SrcB = 0xX, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 0xxx0x1b
+dmem.rd = 0xxxxxxxxx
+ 
+cycle 6: pc = 0x18
+a1 = 00000b, a2 = 10001b, rd1 = 0x0, rd2 = 0xfffffffc
+R[17] = 0xfffffffc, R[18] = 0x4, R[19] = 0x8
 a3 = x000xb, we3 = 0, wd3 = 0x0
-mips.WriteData = 0xc, writedata = 0xc
+mips.WriteData = 0xfffffffc, writedata = 0xfffffffc
 SrcA = 0x0, SrcB = 0x0, alu.y = 0x00000000, ALUControl = 010
-control.Out = 0x101xb
+control.Out = 0x101x0b
 dmem.rd = 0x0
  
 successfully pass runtime checker
@@ -47,4 +65,4 @@ successfully pass memory judge
 
 [Done]
 
-$finish called at time : 200 ns : File "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 170
+$finish called at time : 280 ns : File "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 170
