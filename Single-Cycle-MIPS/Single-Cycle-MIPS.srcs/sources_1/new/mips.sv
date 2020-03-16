@@ -40,8 +40,8 @@ module mips #(parameter ADDRLEN=32, DATALEN=32) (
     assign Instr = instr;
     assign ReadData = readdata;
     
-    pcounter pcounter(.clk(clk), .next_pc(next_PC), .cur_pc(PC));
-    regfile regfile(.clk(clk), .we3(RegWrite), .a1(Instr[25:21]), .a2(Instr[20:16]), .a3(WriteReg), .rd1(SrcA), .rd2(WriteData), .wd3(Result));
+    pcounter pcounter(.clk(clk), .reset(reset), .next_pc(next_PC), .cur_pc(PC));
+    regfile regfile(.clk(clk), .reset(reset), .we3(RegWrite), .a1(Instr[25:21]), .a2(Instr[20:16]), .a3(WriteReg), .rd1(SrcA), .rd2(WriteData), .wd3(Result));
     signext signext(.in(Instr[15:0]), .out(SignImm));
     alu alu(.a(SrcA), .b(SrcB), .f(ALUControl), .zf(Zero), .y(ALUResult));
     adder adder_0(.a(PC), .b(4), .y(PCPlus4));

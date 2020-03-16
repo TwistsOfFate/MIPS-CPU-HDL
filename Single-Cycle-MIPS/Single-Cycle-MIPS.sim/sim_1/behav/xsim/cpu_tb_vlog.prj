@@ -10,7 +10,7 @@ sv xil_defaultlib  \
 "../../../../Single-Cycle-MIPS.srcs/sources_1/new/pcounter.sv" \
 "../../../../Single-Cycle-MIPS.srcs/sources_1/new/regfile.sv" \
 "../../../../Single-Cycle-MIPS.srcs/sources_1/new/signext.sv" \
-"../../../../Single-Cycle-MIPS.srcs/sim_1/new/cpu_tb.sv" \
+"../../../../../../ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

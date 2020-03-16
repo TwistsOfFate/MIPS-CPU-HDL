@@ -21,12 +21,15 @@
 
 
 module pcounter #(parameter DATALEN=32) (
-    input logic clk,
+    input logic clk, reset,
     input logic [DATALEN-1:0] next_pc,
-    output logic [DATALEN-1:0] cur_pc
+    output logic [DATALEN-1:0] cur_pc = 0
     );
     
-    always_ff @(posedge clk)
-        cur_pc <= next_pc;
+    always_ff @(negedge clk or posedge reset)
+    begin
+        if (!reset) cur_pc <= next_pc;
+        else cur_pc <= 0;
+    end
     
 endmodule

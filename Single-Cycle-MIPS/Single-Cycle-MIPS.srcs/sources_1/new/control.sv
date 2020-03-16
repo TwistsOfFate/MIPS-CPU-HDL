@@ -40,7 +40,7 @@ module control(
         endcase
     
     always_comb
-        case ({ALUOp, Funct})
+        casex ({ALUOp, Funct})
             8'b00_XXXXXX: ALUControl <= 3'b010;
             8'bX1_XXXXXX: ALUControl <= 3'b110;
             8'b1X_100000: ALUControl <= 3'b010;

@@ -20,19 +20,24 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module regfile #(parameter ADDRLEN=5, DATALEN=32) (
-    input logic clk,
+module regfile(
+    input logic clk, reset,
     input logic we3,
-    input logic [ADDRLEN-1:0] a1, a2, a3,
-    output logic [DATALEN-1:0] rd1, rd2,
-    input logic [DATALEN-1:0] wd3
+    input logic [4:0] a1, a2, a3,
+    output logic [31:0] rd1, rd2,
+    input logic [31:0] wd3
     );
     
-    logic [ADDRLEN-1:0] R[DATALEN-1:0];
+    logic [31:0] R[31:0];
     
-    always_ff @(posedge clk)
+    integer i;
+    
+    always_ff @(negedge clk or posedge reset)
     begin
-        if (we3)
+        if (reset)
+            for (i=0;i<32;++i)
+                R[i] <= 0;
+        else if (we3)
             R[a3] <= wd3;
     end
     

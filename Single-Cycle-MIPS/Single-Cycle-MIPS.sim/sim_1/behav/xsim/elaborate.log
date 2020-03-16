@@ -19,10 +19,10 @@ Compiling module xil_defaultlib.mips
 Compiling module xil_defaultlib.imem
 Compiling module xil_defaultlib.dmem
 Compiling module xil_defaultlib.cpu_tb
-WARNING: [XSIM 43-3373] "D:/Xilinx/projects/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sim_1/new/cpu_tb.sv" Line 35. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "D:/Xilinx/projects/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sim_1/new/cpu_tb.sv" Line 53. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "D:/Xilinx/projects/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sim_1/new/cpu_tb.sv" Line 108. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "D:/Xilinx/projects/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sim_1/new/cpu_tb.sv" Line 118. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "D:/Xilinx/projects/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sim_1/new/cpu_tb.sv" Line 136. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 35. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 53. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 117. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 127. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 145. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot cpu_tb_behav
