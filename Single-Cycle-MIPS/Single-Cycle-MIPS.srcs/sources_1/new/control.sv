@@ -22,37 +22,49 @@
 
 module control(
     input logic [5:0] Op, Funct,
-    output logic MemtoReg, MemWrite, Branch,
+    input logic Zero,
+    output logic MemtoReg, MemWrite,
     output logic [2:0] ALUControl,
-    output logic ALUSrc, RegDst, RegWrite, Jump
+    output logic ALUSrc, RegDst, RegWrite,
+    output logic [1:0] PCSrc
     );
     
     logic [1:0] ALUOp;
-    logic [6:0] Out;
+    logic [4:0] Out;
     
     always_comb
         case (Op)
-            6'b000000: {Out, ALUOp} <= 9'b1100000_10;   //R-type
-            6'b100011: {Out, ALUOp} <= 9'b1010010_00;   //rw
-            6'b101011: {Out, ALUOp} <= 9'b0X101X0_00;   //sw
-            6'b000100: {Out, ALUOp} <= 9'b0X010X0_01;   //beq
-            6'b001000: {Out, ALUOp} <= 9'b1010000_00;   //addi
-            6'b000010: {Out, ALUOp} <= 9'b0XXX0X1_XX;   //jump
+            6'b000000: {Out, ALUOp} <= 'b11000_10;   //R-type
+            6'b100011: {Out, ALUOp} <= 'b10101_00;   //rw
+            6'b101011: {Out, ALUOp} <= 'b0X11X_00;   //sw
+            6'b000100: {Out, ALUOp} <= 'b0X00X_01;   //beq
+            6'b001000: {Out, ALUOp} <= 'b10100_00;   //addi
+            6'b000010: {Out, ALUOp} <= 'b0XX0X_XX;   //jump
+            6'b000101: {Out, ALUOp} <= 'b0X00X_01;     //bne
             default: ;
         endcase
     
     always_comb
         casex ({ALUOp, Funct})
-            8'b00_XXXXXX: ALUControl <= 3'b010;
-            8'bX1_XXXXXX: ALUControl <= 3'b110;
-            8'b1X_100000: ALUControl <= 3'b010;
-            8'b1X_100010: ALUControl <= 3'b110;
-            8'b1X_100100: ALUControl <= 3'b000;
-            8'b1X_100101: ALUControl <= 3'b001;
-            8'b1X_101010: ALUControl <= 3'b111;
+            8'b00_XXXXXX: ALUControl <= 3'b010;     //add
+            8'bX1_XXXXXX: ALUControl <= 3'b110;     //subtract
+            8'b1X_100000: ALUControl <= 3'b010;     //add
+            8'b1X_100010: ALUControl <= 3'b110;     //subtract
+            8'b1X_100100: ALUControl <= 3'b000;     //and
+            8'b1X_100101: ALUControl <= 3'b001;     //or
+            8'b1X_101010: ALUControl <= 3'b111;     //set less than
+            8'b1X_001000: ALUControl <= 3'b010;     //jr
             default: ;
         endcase
     
-    assign {RegWrite, RegDst, ALUSrc, Branch, MemWrite, MemtoReg, Jump} = Out;
+    always_comb
+    begin
+        if (Op==6'b000010) PCSrc <= 2'b10;
+        else if (Op==6'b000000&&Funct==6'b001000) PCSrc <= 2'b11;
+        else if (Op==6'b000100&&Zero || Op==6'b000101&&~Zero) PCSrc <= 2'b01;
+        else PCSrc <= 2'b00;
+    end
+    
+    assign {RegWrite, RegDst, ALUSrc, MemWrite, MemtoReg} = Out;
     
 endmodule

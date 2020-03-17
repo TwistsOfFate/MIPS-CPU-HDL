@@ -31,7 +31,7 @@ module dmem(
     
     integer i;   
     
-    always_ff @(negedge clk or posedge reset)
+    always_ff @(posedge clk or posedge reset)
     begin
         if (reset)
             for (i=0;i<128;++i)

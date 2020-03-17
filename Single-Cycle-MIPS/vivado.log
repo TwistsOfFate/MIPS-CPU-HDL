@@ -2,10 +2,10 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Mon Mar 16 12:46:01 2020
-# Process ID: 26248
+# Start of session at: Mon Mar 16 19:57:57 2020
+# Process ID: 16112
 # Current directory: F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24008 F:\Repos\MIPS-CPU-HDL\Single-Cycle-MIPS\Single-Cycle-MIPS.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent27036 F:\Repos\MIPS-CPU-HDL\Single-Cycle-MIPS\Single-Cycle-MIPS.xpr
 # Log file: F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/vivado.log
 # Journal file: F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS\vivado.jou
 #-----------------------------------------------------------
@@ -17,102 +17,6 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2018.3/data/ip'.
 update_compile_order -fileset sources_1
-launch_simulation
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'cpu_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj cpu_tb_vlog.prj"
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
-Vivado Simulator 2018.3
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto a1100814564b4d7b9301ed40ccc30079 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot cpu_tb_behav xil_defaultlib.cpu_tb xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "cpu_tb_behav -key {Behavioral:sim_1:Functional:cpu_tb} -tclbatch {cpu_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-source cpu_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-WARNING: Simulation object /cpu_tb/summary was not traceable in the design for the following reason:
-Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
-# log_wave -r /
-WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
-# run 1000ns
-========== Test: test1 ==========
-========== In init ==========
-          4 instructions in total
-========== In runtime checker ==========
-cycle 1: pc = 0x0
-a1 = 00000b, a2 = 10010b, rd1 = 0x0, rd2 = 0x0
-R[17] = 0x0, R[18] = 0x0, R[19] = 0x0
-a3 = 10010b, we3 = 1, wd3 = 0x4
-mips.WriteData = 0x0, writedata = 0x0
-SrcA = 0x0, SrcB = 0x4, alu.y = 0x00000004, ALUControl = 010
-control.Out = 101001b
-dmem.rd = 0x4
- 
-cycle 2: pc = 0x4
-a1 = 00000b, a2 = 10011b, rd1 = 0x0, rd2 = 0x0
-R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
-a3 = 10011b, we3 = 1, wd3 = 0x8
-mips.WriteData = 0x0, writedata = 0x0
-SrcA = 0x0, SrcB = 0x8, alu.y = 0x00000008, ALUControl = 010
-control.Out = 101001b
-dmem.rd = 0x8
- 
-cycle 3: pc = 0x8
-a1 = 10010b, a2 = 10011b, rd1 = 0x4, rd2 = 0x8
-R[17] = 0x0, R[18] = 0x4, R[19] = 0x8
-a3 = 10001b, we3 = 1, wd3 = 0xc
-mips.WriteData = 0x8, writedata = 0x8
-SrcA = 0x4, SrcB = 0x8, alu.y = 0x0000000c, ALUControl = 010
-control.Out = 110000b
-dmem.rd = 0xc
- 
-cycle 4: pc = 0xc
-a1 = 00000b, a2 = 10001b, rd1 = 0x0, rd2 = 0xc
-R[17] = 0xc, R[18] = 0x4, R[19] = 0x8
-a3 = x000xb, we3 = 0, wd3 = 0x0
-mips.WriteData = 0xc, writedata = 0xc
-SrcA = 0x0, SrcB = 0x0, alu.y = 0x00000000, ALUControl = 010
-control.Out = 0x101xb
-dmem.rd = 0x0
- 
-successfully pass runtime checker
-========== In memory judge ==========
-successfully pass memory judge
-[OK] test1
-
-[Done]
-
-$finish called at time : 200 ns : File "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 170
-xsim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 712.645 ; gain = 22.051
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'cpu_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 713.637 ; gain = 23.168
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
 launch_simulation
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
@@ -175,7 +79,7 @@ WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_
 WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 145. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot cpu_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
@@ -200,7 +104,7 @@ WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of o
 # run 1000ns
 ========== Test: test1 ==========
 ========== In init ==========
-          4 instructions in total
+          7 instructions in total
 ========== In runtime checker ==========
 cycle 1: pc = 0x0
 a1 = 00000b, a2 = 10010b, rd1 = 0x0, rd2 = 0x0
@@ -208,7 +112,7 @@ R[17] = 0x0, R[18] = 0x0, R[19] = 0x0
 a3 = 10010b, we3 = 0, wd3 = 0x4
 mips.WriteData = 0x0, writedata = 0x0
 SrcA = 0x0, SrcB = 0x4, alu.y = 0x00000004, ALUControl = 010
-control.Out = 010010b
+control.Out = 0100100b
 dmem.rd = 0x4
  
 cycle 2: pc = 0x4
@@ -217,313 +121,59 @@ R[17] = 0x0, R[18] = 0x0, R[19] = 0x0
 a3 = 10011b, we3 = 0, wd3 = 0x8
 mips.WriteData = 0x0, writedata = 0x0
 SrcA = 0x0, SrcB = 0x8, alu.y = 0x00000008, ALUControl = 010
-control.Out = 010010b
+control.Out = 0100100b
 dmem.rd = 0x8
  
 cycle 3: pc = 0x8
+a1 = 00000b, a2 = 10100b, rd1 = 0x0, rd2 = 0x0
+R[17] = 0x0, R[18] = 0x0, R[19] = 0x0
+a3 = 10100b, we3 = 0, wd3 = 0x8
+mips.WriteData = 0x0, writedata = 0x0
+SrcA = 0x0, SrcB = 0x8, alu.y = 0x00000008, ALUControl = 010
+control.Out = 0100100b
+dmem.rd = 0x8
+ 
+cycle 4: pc = 0xc
+a1 = 10010b, a2 = 10011b, rd1 = 0x0, rd2 = 0x0
+R[17] = 0x0, R[18] = 0x0, R[19] = 0x0
+a3 = 10001b, we3 = 0, wd3 = 0x0
+mips.WriteData = 0x0, writedata = 0x0
+SrcA = 0x0, SrcB = 0x0, alu.y = 0x00000000, ALUControl = 110
+control.Out = 1000000b
+dmem.rd = 0x0
+ 
+cycle 5: pc = 0x10
+a1 = 00000b, a2 = 10010b, rd1 = 0x0, rd2 = 0x0
+R[17] = 0x0, R[18] = 0x0, R[19] = 0x0
+a3 = x00x0b, we3 = 0, wd3 = 0x0
+mips.WriteData = 0x0, writedata = 0x0
+SrcA = 0x0, SrcB = 0x0, alu.y = 0x00000000, ALUControl = 110
+control.Out = x000x01b
+dmem.rd = 0x0
+ 
+cycle 6: pc = 0x14
 a1 = 10010b, a2 = 10011b, rd1 = 0x0, rd2 = 0x0
 R[17] = 0x0, R[18] = 0x0, R[19] = 0x0
 a3 = 10001b, we3 = 0, wd3 = 0x0
 mips.WriteData = 0x0, writedata = 0x0
 SrcA = 0x0, SrcB = 0x0, alu.y = 0x00000000, ALUControl = 010
-control.Out = 100000b
+control.Out = 1000000b
 dmem.rd = 0x0
  
-cycle 4: pc = 0xc
+cycle 7: pc = 0x18
 a1 = 00000b, a2 = 10001b, rd1 = 0x0, rd2 = 0x0
 R[17] = 0x0, R[18] = 0x0, R[19] = 0x0
 a3 = x000xb, we3 = 0, wd3 = 0x0
 mips.WriteData = 0x0, writedata = 0x0
 SrcA = 0x0, SrcB = 0x0, alu.y = 0x00000000, ALUControl = 010
-control.Out = x101x0b
+control.Out = x101x00b
 dmem.rd = 0x0
  
-[Error] PC: 0x0000000c Cycle:           4	Expected: [0x00000000]=0x0000000c, Got: [0x00000000]=0x00000000
-xsim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:18 . Memory (MB): peak = 726.320 ; gain = 0.980
+[Error] PC: 0x00000018 Cycle:           7	Expected: [0x00000000]=0xfffffffc, Got: [0x00000000]=0x00000000
+xsim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 724.656 ; gain = 28.668
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'cpu_tb_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:23 . Memory (MB): peak = 726.320 ; gain = 0.980
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'cpu_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj cpu_tb_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/adder.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module adder
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/alu.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module alu
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/control.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module control
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/dmem.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module dmem
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/imem.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module imem
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mips.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mips
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mux2.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux2
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/pcounter.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module pcounter
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/regfile.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module regfile
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/signext.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module signext
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module cpu_tb
-INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
-Vivado Simulator 2018.3
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto a1100814564b4d7b9301ed40ccc30079 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot cpu_tb_behav xil_defaultlib.cpu_tb xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.pcounter
-Compiling module xil_defaultlib.regfile
-Compiling module xil_defaultlib.signext
-Compiling module xil_defaultlib.alu
-Compiling module xil_defaultlib.adder
-Compiling module xil_defaultlib.mux2
-Compiling module xil_defaultlib.mux2(DATALEN=5)
-Compiling module xil_defaultlib.control
-Compiling module xil_defaultlib.mips
-Compiling module xil_defaultlib.imem
-Compiling module xil_defaultlib.dmem
-Compiling module xil_defaultlib.cpu_tb
-WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 35. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 53. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 117. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 127. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 145. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot cpu_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "cpu_tb_behav -key {Behavioral:sim_1:Functional:cpu_tb} -tclbatch {cpu_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-source cpu_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-WARNING: Simulation object /cpu_tb/summary was not traceable in the design for the following reason:
-Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
-# log_wave -r /
-WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
-# run 1000ns
-========== Test: test1 ==========
-========== In init ==========
-          4 instructions in total
-========== In runtime checker ==========
-cycle 1: pc = 0x0
-a1 = 00000b, a2 = 10010b, rd1 = 0x0, rd2 = 0x0
-R[17] = 0x0, R[18] = 0x0, R[19] = 0x0
-a3 = 10010b, we3 = 1, wd3 = 0x4
-mips.WriteData = 0x0, writedata = 0x0
-SrcA = 0x0, SrcB = 0x4, alu.y = 0x00000004, ALUControl = 010
-control.Out = 1010010b
-dmem.rd = 0x4
- 
-cycle 2: pc = 0x4
-a1 = 00000b, a2 = 10011b, rd1 = 0x0, rd2 = 0x0
-R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
-a3 = 10011b, we3 = 1, wd3 = 0x8
-mips.WriteData = 0x0, writedata = 0x0
-SrcA = 0x0, SrcB = 0x8, alu.y = 0x00000008, ALUControl = 010
-control.Out = 1010010b
-dmem.rd = 0x8
- 
-cycle 3: pc = 0x8
-a1 = 10010b, a2 = 10011b, rd1 = 0x4, rd2 = 0x8
-R[17] = 0x0, R[18] = 0x4, R[19] = 0x8
-a3 = 10001b, we3 = 1, wd3 = 0xc
-mips.WriteData = 0x8, writedata = 0x8
-SrcA = 0x4, SrcB = 0x8, alu.y = 0x0000000c, ALUControl = 010
-control.Out = 1100000b
-dmem.rd = 0xc
- 
-cycle 4: pc = 0xc
-a1 = 00000b, a2 = 10001b, rd1 = 0x0, rd2 = 0xc
-R[17] = 0xc, R[18] = 0x4, R[19] = 0x8
-a3 = x000xb, we3 = 0, wd3 = 0x0
-mips.WriteData = 0xc, writedata = 0xc
-SrcA = 0x0, SrcB = 0x0, alu.y = 0x00000000, ALUControl = 010
-control.Out = 0x101x0b
-dmem.rd = 0x0
- 
-successfully pass runtime checker
-========== In memory judge ==========
-successfully pass memory judge
-[OK] test1
-
-[Done]
-
-$finish called at time : 200 ns : File "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 170
-xsim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 728.844 ; gain = 0.000
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'cpu_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:18 . Memory (MB): peak = 728.844 ; gain = 0.000
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 728.844 ; gain = 0.000
-launch_simulation
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'cpu_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj cpu_tb_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/adder.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module adder
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/alu.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module alu
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/control.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module control
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/dmem.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module dmem
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/imem.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module imem
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mips.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mips
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mux2.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux2
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/pcounter.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module pcounter
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/regfile.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module regfile
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/signext.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module signext
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module cpu_tb
-INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
-Vivado Simulator 2018.3
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto a1100814564b4d7b9301ed40ccc30079 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot cpu_tb_behav xil_defaultlib.cpu_tb xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.pcounter
-Compiling module xil_defaultlib.regfile
-Compiling module xil_defaultlib.signext
-Compiling module xil_defaultlib.alu
-Compiling module xil_defaultlib.adder
-Compiling module xil_defaultlib.mux2
-Compiling module xil_defaultlib.mux2(DATALEN=5)
-Compiling module xil_defaultlib.control
-Compiling module xil_defaultlib.mips
-Compiling module xil_defaultlib.imem
-Compiling module xil_defaultlib.dmem
-Compiling module xil_defaultlib.cpu_tb
-WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 35. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 53. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 117. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 127. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 145. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot cpu_tb_behav
-
-****** Webtalk v2018.3 (64-bit)
-  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
-  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-
-source F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim/xsim.dir/cpu_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Mon Mar 16 18:42:24 2020...
-run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 728.844 ; gain = 0.000
-INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "cpu_tb_behav -key {Behavioral:sim_1:Functional:cpu_tb} -tclbatch {cpu_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-source cpu_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-WARNING: Simulation object /cpu_tb/summary was not traceable in the design for the following reason:
-Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
-# log_wave -r /
-WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
-# run 1000ns
-========== Test: test1 ==========
-========== In init ==========
-          5 instructions in total
-========== In runtime checker ==========
-cycle 1: pc = 0x0
-a1 = 00000b, a2 = 10010b, rd1 = 0x0, rd2 = 0x0
-R[17] = 0x0, R[18] = 0x0, R[19] = 0x0
-a3 = 10010b, we3 = 1, wd3 = 0x4
-mips.WriteData = 0x0, writedata = 0x0
-SrcA = 0x0, SrcB = 0x4, alu.y = 0x00000004, ALUControl = 010
-control.Out = 1010010b
-dmem.rd = 0x4
- 
-cycle 2: pc = 0x4
-a1 = 00000b, a2 = 10011b, rd1 = 0x0, rd2 = 0x0
-R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
-a3 = 10011b, we3 = 1, wd3 = 0x8
-mips.WriteData = 0x0, writedata = 0x0
-SrcA = 0x0, SrcB = 0x8, alu.y = 0x00000008, ALUControl = 010
-control.Out = 1010010b
-dmem.rd = 0x8
- 
-cycle 3: pc = 0x8
-a1 = 00000b, a2 = 10001b, rd1 = 0x0, rd2 = 0x0
-R[17] = 0x0, R[18] = 0x4, R[19] = 0x8
-a3 = x000xb, we3 = 0, wd3 = 0x0
-mips.WriteData = 0x0, writedata = 0x0
-SrcA = 0x0, SrcB = 0x0, alu.y = 0x00000000, ALUControl = 110
-control.Out = 0x010x0b
-dmem.rd = 0x0
- 
-cycle 4: pc = 0x10
-a1 = 00000b, a2 = 10001b, rd1 = 0x0, rd2 = 0x0
-R[17] = 0x0, R[18] = 0x4, R[19] = 0x8
-a3 = x000xb, we3 = 0, wd3 = 0x0
-mips.WriteData = 0x0, writedata = 0x0
-SrcA = 0x0, SrcB = 0x0, alu.y = 0x00000000, ALUControl = 010
-control.Out = 0x101x0b
-dmem.rd = 0x0
- 
-[Error] PC: 0x00000010 Cycle:           4	Expected: [0x00000000]=0x0000000c, Got: [0x00000000]=0x00000000
-xsim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 728.844 ; gain = 0.000
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'cpu_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:17 . Memory (MB): peak = 728.844 ; gain = 0.000
+launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 724.656 ; gain = 30.668
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
 launch_simulation
@@ -621,7 +271,7 @@ R[17] = 0x0, R[18] = 0x0, R[19] = 0x0
 a3 = 10010b, we3 = 1, wd3 = 0x4
 mips.WriteData = 0x0, writedata = 0x0
 SrcA = 0x0, SrcB = 0x4, alu.y = 0x00000004, ALUControl = 010
-control.Out = 1010010b
+control.Out = 10100100b
 dmem.rd = 0x4
  
 cycle 2: pc = 0x4
@@ -630,7 +280,7 @@ R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
 a3 = 10011b, we3 = 1, wd3 = 0x8
 mips.WriteData = 0x0, writedata = 0x0
 SrcA = 0x0, SrcB = 0x8, alu.y = 0x00000008, ALUControl = 010
-control.Out = 1010010b
+control.Out = 10100100b
 dmem.rd = 0x8
  
 cycle 3: pc = 0x8
@@ -639,7 +289,7 @@ R[17] = 0x0, R[18] = 0x4, R[19] = 0x8
 a3 = 10100b, we3 = 1, wd3 = 0x8
 mips.WriteData = 0x0, writedata = 0x0
 SrcA = 0x0, SrcB = 0x8, alu.y = 0x00000008, ALUControl = 010
-control.Out = 1010010b
+control.Out = 10100100b
 dmem.rd = 0x8
  
 cycle 4: pc = 0xc
@@ -648,17 +298,17 @@ R[17] = 0x0, R[18] = 0x4, R[19] = 0x8
 a3 = 10001b, we3 = 1, wd3 = 0xfffffffc
 mips.WriteData = 0x8, writedata = 0x8
 SrcA = 0x4, SrcB = 0x8, alu.y = 0xfffffffc, ALUControl = 110
-control.Out = 1100000b
+control.Out = 11000000b
 dmem.rd = 0xxxxxxxxx
  
 cycle 5: pc = 0x10
-a1 = 10100b, a2 = 10011b, rd1 = 0x8, rd2 = 0x8
+a1 = 00000b, a2 = 10010b, rd1 = 0x0, rd2 = 0x4
 R[17] = 0xfffffffc, R[18] = 0x4, R[19] = 0x8
-a3 = x00xxb, we3 = 0, wd3 = 0x0
-mips.WriteData = 0x8, writedata = 0x8
-SrcA = 0x8, SrcB = 0x8, alu.y = 0x00000000, ALUControl = 110
-control.Out = 0x010x0b
-dmem.rd = 0x0
+a3 = x00x0b, we3 = 0, wd3 = 0xxxxxxxxx
+mips.WriteData = 0x4, writedata = 0x4
+SrcA = 0x0, SrcB = 0x4, alu.y = 0xfffffffc, ALUControl = 110
+control.Out = 0x000x01b
+dmem.rd = 0xxxxxxxxx
  
 cycle 6: pc = 0x18
 a1 = 00000b, a2 = 10001b, rd1 = 0x0, rd2 = 0xfffffffc
@@ -666,7 +316,7 @@ R[17] = 0xfffffffc, R[18] = 0x4, R[19] = 0x8
 a3 = x000xb, we3 = 0, wd3 = 0x0
 mips.WriteData = 0xfffffffc, writedata = 0xfffffffc
 SrcA = 0x0, SrcB = 0x0, alu.y = 0x00000000, ALUControl = 010
-control.Out = 0x101x0b
+control.Out = 0x101x00b
 dmem.rd = 0x0
  
 successfully pass runtime checker
@@ -677,10 +327,329 @@ successfully pass memory judge
 [Done]
 
 $finish called at time : 280 ns : File "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 170
-xsim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 738.672 ; gain = 0.000
+xsim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 736.168 ; gain = 0.000
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'cpu_tb_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 738.672 ; gain = 0.000
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 736.168 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close [ open F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mux4.sv w ]
+add_files F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mux4.sv
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'cpu_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj cpu_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/alu.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/control.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/dmem.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dmem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/imem.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module imem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mips.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mips
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mux2.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mux4.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/pcounter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pcounter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/regfile.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/signext.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module signext
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto a1100814564b4d7b9301ed40ccc30079 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot cpu_tb_behav xil_defaultlib.cpu_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 2 for port 's' [F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mips.sv:52]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pcounter
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.signext
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.adder
+Compiling module xil_defaultlib.mux2
+Compiling module xil_defaultlib.mux2(DATALEN=5)
+Compiling module xil_defaultlib.mux4
+Compiling module xil_defaultlib.control
+Compiling module xil_defaultlib.mips
+Compiling module xil_defaultlib.imem
+Compiling module xil_defaultlib.dmem
+Compiling module xil_defaultlib.cpu_tb
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 35. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 53. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 117. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 127. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 145. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot cpu_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "cpu_tb_behav -key {Behavioral:sim_1:Functional:cpu_tb} -tclbatch {cpu_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source cpu_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: Simulation object /cpu_tb/summary was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+# log_wave -r /
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+# run 1000ns
+========== Test: test1 ==========
+========== In init ==========
+          7 instructions in total
+========== In runtime checker ==========
+cycle 1: pc = 0x0
+a1 = 00000b, a2 = 10010b, rd1 = 0x0, rd2 = 0x0
+R[17] = 0x0, R[18] = 0x0, R[19] = 0x0
+a3 = 10010b, we3 = 1, wd3 = 0x4
+mips.WriteData = 0x0, writedata = 0x0
+SrcA = 0x0, SrcB = 0x4, alu.y = 0x00000004, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0x4
+ 
+cycle 2: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+ 
+cycle 3: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+ 
+cycle 4: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+ 
+cycle 5: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+ 
+cycle 6: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+ 
+cycle 7: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+ 
+cycle 8: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+ 
+cycle 9: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+ 
+cycle 10: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+ 
+cycle 11: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+ 
+cycle 12: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+ 
+cycle 13: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+ 
+cycle 14: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+ 
+cycle 15: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+ 
+cycle 16: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+ 
+cycle 17: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+ 
+cycle 18: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+ 
+cycle 19: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+ 
+cycle 20: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+ 
+cycle 21: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+ 
+cycle 22: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+ 
+cycle 23: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+ 
+cycle 24: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+ 
+xsim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 743.813 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'cpu_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 743.813 ; gain = 0.000
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
 launch_simulation
@@ -692,6 +661,30 @@ INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
 "xvlog --incr --relax -prj cpu_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/alu.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/control.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/dmem.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dmem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/imem.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module imem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mips.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mips
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mux2.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mux4.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/pcounter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pcounter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/regfile.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/signext.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module signext
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_tb
 INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
@@ -700,8 +693,31 @@ Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
 Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto a1100814564b4d7b9301ed40ccc30079 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot cpu_tb_behav xil_defaultlib.cpu_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 2 for port 's' [F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mips.sv:52]
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pcounter
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.signext
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.adder
+Compiling module xil_defaultlib.mux2
+Compiling module xil_defaultlib.mux2(DATALEN=5)
+Compiling module xil_defaultlib.mux4
+Compiling module xil_defaultlib.control
+Compiling module xil_defaultlib.mips
+Compiling module xil_defaultlib.imem
+Compiling module xil_defaultlib.dmem
+Compiling module xil_defaultlib.cpu_tb
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 35. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 53. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 118. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 128. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 146. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot cpu_tb_behav
 INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
@@ -735,8 +751,685 @@ R[17] = 0x0, R[18] = 0x0, R[19] = 0x0
 a3 = 10010b, we3 = 1, wd3 = 0x4
 mips.WriteData = 0x0, writedata = 0x0
 SrcA = 0x0, SrcB = 0x4, alu.y = 0x00000004, ALUControl = 010
-control.Out = 1010010b
+control.Out = 10101b
 dmem.rd = 0x4
+PCSrc = xb
+ 
+cycle 2: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 3: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 4: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 5: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 6: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 7: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 8: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 9: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 10: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 11: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 12: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 13: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 14: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 15: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 16: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 17: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 18: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 19: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 20: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 21: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 22: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 23: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 24: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+xsim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 743.813 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'cpu_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 743.813 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'cpu_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj cpu_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/alu.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/control.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/dmem.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dmem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/imem.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module imem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mips.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mips
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mux2.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mux4.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/pcounter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pcounter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/regfile.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/signext.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module signext
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto a1100814564b4d7b9301ed40ccc30079 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot cpu_tb_behav xil_defaultlib.cpu_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 2 for port 's' [F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mips.sv:52]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pcounter
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.signext
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.adder
+Compiling module xil_defaultlib.mux2
+Compiling module xil_defaultlib.mux2(DATALEN=5)
+Compiling module xil_defaultlib.mux4
+Compiling module xil_defaultlib.control
+Compiling module xil_defaultlib.mips
+Compiling module xil_defaultlib.imem
+Compiling module xil_defaultlib.dmem
+Compiling module xil_defaultlib.cpu_tb
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 35. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 53. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 118. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 128. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 146. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot cpu_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "cpu_tb_behav -key {Behavioral:sim_1:Functional:cpu_tb} -tclbatch {cpu_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source cpu_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: Simulation object /cpu_tb/summary was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+# log_wave -r /
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+# run 1000ns
+========== Test: test1 ==========
+========== In init ==========
+          7 instructions in total
+========== In runtime checker ==========
+cycle 1: pc = 0x0
+a1 = 00000b, a2 = 10010b, rd1 = 0x0, rd2 = 0x0
+R[17] = 0x0, R[18] = 0x0, R[19] = 0x0
+a3 = 10010b, we3 = 1, wd3 = 0x4
+mips.WriteData = 0x0, writedata = 0x0
+SrcA = 0x0, SrcB = 0x4, alu.y = 0x00000004, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0x4
+PCSrc = xb
+ 
+cycle 2: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 3: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 4: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 5: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 6: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 7: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 8: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 9: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 10: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 11: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 12: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 13: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 14: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 15: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 16: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 17: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 18: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 19: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 20: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 21: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 22: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 23: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+cycle 24: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0xxxxxxxxx
+PCSrc = xb
+ 
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'cpu_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 743.813 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'cpu_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj cpu_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/alu.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/control.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/dmem.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dmem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/imem.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module imem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mips.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mips
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mux2.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mux4.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/pcounter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pcounter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/regfile.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/signext.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module signext
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto a1100814564b4d7b9301ed40ccc30079 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot cpu_tb_behav xil_defaultlib.cpu_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pcounter
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.signext
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.adder
+Compiling module xil_defaultlib.mux2
+Compiling module xil_defaultlib.mux2(DATALEN=5)
+Compiling module xil_defaultlib.mux4
+Compiling module xil_defaultlib.control
+Compiling module xil_defaultlib.mips
+Compiling module xil_defaultlib.imem
+Compiling module xil_defaultlib.dmem
+Compiling module xil_defaultlib.cpu_tb
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 35. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 53. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 118. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 128. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 146. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot cpu_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "cpu_tb_behav -key {Behavioral:sim_1:Functional:cpu_tb} -tclbatch {cpu_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source cpu_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: Simulation object /cpu_tb/summary was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+# log_wave -r /
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+# run 1000ns
+========== Test: test1 ==========
+========== In init ==========
+          7 instructions in total
+========== In runtime checker ==========
+cycle 1: pc = 0x0
+a1 = 00000b, a2 = 10010b, rd1 = 0x0, rd2 = 0x0
+R[17] = 0x0, R[18] = 0x0, R[19] = 0x0
+a3 = 10010b, we3 = 1, wd3 = 0x4
+mips.WriteData = 0x0, writedata = 0x0
+SrcA = 0x0, SrcB = 0x4, alu.y = 0x00000004, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0x4
+PCSrc = 0b
  
 cycle 2: pc = 0x4
 a1 = 00000b, a2 = 10011b, rd1 = 0x0, rd2 = 0x0
@@ -744,17 +1437,19 @@ R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
 a3 = 10011b, we3 = 1, wd3 = 0x8
 mips.WriteData = 0x0, writedata = 0x0
 SrcA = 0x0, SrcB = 0x8, alu.y = 0x00000008, ALUControl = 010
-control.Out = 1010010b
+control.Out = 10101b
 dmem.rd = 0x8
+PCSrc = 0b
  
 cycle 3: pc = 0x8
 a1 = 00000b, a2 = 10100b, rd1 = 0x0, rd2 = 0x0
 R[17] = 0x0, R[18] = 0x4, R[19] = 0x8
-a3 = 10100b, we3 = 1, wd3 = 0x8
+a3 = 10100b, we3 = 1, wd3 = 0x18
 mips.WriteData = 0x0, writedata = 0x0
-SrcA = 0x0, SrcB = 0x8, alu.y = 0x00000008, ALUControl = 010
-control.Out = 1010010b
-dmem.rd = 0x8
+SrcA = 0x0, SrcB = 0x10, alu.y = 0x00000010, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0x18
+PCSrc = 0b
  
 cycle 4: pc = 0xc
 a1 = 10010b, a2 = 10011b, rd1 = 0x4, rd2 = 0x8
@@ -762,26 +1457,893 @@ R[17] = 0x0, R[18] = 0x4, R[19] = 0x8
 a3 = 10001b, we3 = 1, wd3 = 0xfffffffc
 mips.WriteData = 0x8, writedata = 0x8
 SrcA = 0x4, SrcB = 0x8, alu.y = 0xfffffffc, ALUControl = 110
-control.Out = 1100000b
+control.Out = 11000b
 dmem.rd = 0xxxxxxxxx
+PCSrc = 0b
  
 cycle 5: pc = 0x10
-a1 = 00000b, a2 = 00000b, rd1 = 0x0, rd2 = 0x0
+a1 = 10100b, a2 = 00000b, rd1 = 0x18, rd2 = 0x0
 R[17] = 0xfffffffc, R[18] = 0x4, R[19] = 0x8
-a3 = 00000b, we3 = 0, wd3 = 0xxxxxxxxx
+a3 = 00000b, we3 = 1, wd3 = 0x18
 mips.WriteData = 0x0, writedata = 0x0
-SrcA = 0x0, SrcB = 0xX, alu.y = 0xxxxxxxxx, ALUControl = 010
-control.Out = 0xxx0x1b
+SrcA = 0x18, SrcB = 0x0, alu.y = 0x00000018, ALUControl = 110
+control.Out = 11000b
+dmem.rd = 0x0
+PCSrc = 0b
+ 
+cycle 6: pc = 0x14
+a1 = 10010b, a2 = 10011b, rd1 = 0x4, rd2 = 0x8
+R[17] = 0xfffffffc, R[18] = 0x4, R[19] = 0x8
+a3 = 10001b, we3 = 1, wd3 = 0xc
+mips.WriteData = 0x8, writedata = 0x8
+SrcA = 0x4, SrcB = 0x8, alu.y = 0x0000000c, ALUControl = 010
+control.Out = 11000b
+dmem.rd = 0xc
+PCSrc = 0b
+ 
+cycle 7: pc = 0x18
+a1 = 00000b, a2 = 10001b, rd1 = 0x0, rd2 = 0xc
+R[17] = 0xc, R[18] = 0x4, R[19] = 0x8
+a3 = x000xb, we3 = 0, wd3 = 0x0
+mips.WriteData = 0xc, writedata = 0xc
+SrcA = 0x0, SrcB = 0x0, alu.y = 0x00000000, ALUControl = 010
+control.Out = 0x11xb
+dmem.rd = 0x0
+PCSrc = 0b
+ 
+[Error] PC: 0x00000018 Cycle:           7	Expected: [0x00000000]=0xfffffffc, Got: [0x00000000]=0x0000000c
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'cpu_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 744.180 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'cpu_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj cpu_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/alu.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/control.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/dmem.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dmem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/imem.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module imem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mips.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mips
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mux2.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mux4.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/pcounter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pcounter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/regfile.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/signext.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module signext
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto a1100814564b4d7b9301ed40ccc30079 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot cpu_tb_behav xil_defaultlib.cpu_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pcounter
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.signext
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.adder
+Compiling module xil_defaultlib.mux2
+Compiling module xil_defaultlib.mux2(DATALEN=5)
+Compiling module xil_defaultlib.mux4
+Compiling module xil_defaultlib.control
+Compiling module xil_defaultlib.mips
+Compiling module xil_defaultlib.imem
+Compiling module xil_defaultlib.dmem
+Compiling module xil_defaultlib.cpu_tb
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 35. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 53. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 118. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 128. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 146. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot cpu_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "cpu_tb_behav -key {Behavioral:sim_1:Functional:cpu_tb} -tclbatch {cpu_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source cpu_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: Simulation object /cpu_tb/summary was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+# log_wave -r /
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+# run 1000ns
+========== Test: test1 ==========
+========== In init ==========
+          7 instructions in total
+========== In runtime checker ==========
+cycle 1: pc = 0x0
+a1 = 00000b, a2 = 10010b, rd1 = 0x0, rd2 = 0x0
+R[17] = 0x0, R[18] = 0x0, R[19] = 0x0
+a3 = 10010b, we3 = 1, wd3 = 0x4
+mips.WriteData = 0x0, writedata = 0x0
+SrcA = 0x0, SrcB = 0x4, alu.y = 0x00000004, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0x4
+PCSrc = 0b
+ 
+cycle 2: pc = 0x4
+a1 = 00000b, a2 = 10011b, rd1 = 0x0, rd2 = 0x0
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = 10011b, we3 = 1, wd3 = 0x8
+mips.WriteData = 0x0, writedata = 0x0
+SrcA = 0x0, SrcB = 0x8, alu.y = 0x00000008, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0x8
+PCSrc = 0b
+ 
+cycle 3: pc = 0x8
+a1 = 00000b, a2 = 10100b, rd1 = 0x0, rd2 = 0x0
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x8
+a3 = 10100b, we3 = 1, wd3 = 0x18
+mips.WriteData = 0x0, writedata = 0x0
+SrcA = 0x0, SrcB = 0x10, alu.y = 0x00000010, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0x18
+PCSrc = 0b
+ 
+cycle 4: pc = 0xc
+a1 = 10010b, a2 = 10011b, rd1 = 0x4, rd2 = 0x8
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x8
+a3 = 10001b, we3 = 1, wd3 = 0xfffffffc
+mips.WriteData = 0x8, writedata = 0x8
+SrcA = 0x4, SrcB = 0x8, alu.y = 0xfffffffc, ALUControl = 110
+control.Out = 11000b
 dmem.rd = 0xxxxxxxxx
+PCSrc = 0b
+ 
+cycle 5: pc = 0x10
+a1 = 10100b, a2 = 00000b, rd1 = 0x18, rd2 = 0x0
+R[17] = 0xfffffffc, R[18] = 0x4, R[19] = 0x8
+a3 = 00000b, we3 = 1, wd3 = 0x18
+mips.WriteData = 0x0, writedata = 0x0
+SrcA = 0x18, SrcB = 0x0, alu.y = 0x00000018, ALUControl = 110
+control.Out = 11000b
+dmem.rd = 0x0
+PCSrc = 0b
+ 
+cycle 6: pc = 0x14
+a1 = 10010b, a2 = 10011b, rd1 = 0x4, rd2 = 0x8
+R[17] = 0xfffffffc, R[18] = 0x4, R[19] = 0x8
+a3 = 10001b, we3 = 1, wd3 = 0xc
+mips.WriteData = 0x8, writedata = 0x8
+SrcA = 0x4, SrcB = 0x8, alu.y = 0x0000000c, ALUControl = 010
+control.Out = 11000b
+dmem.rd = 0xc
+PCSrc = 0b
+ 
+cycle 7: pc = 0x18
+a1 = 00000b, a2 = 10001b, rd1 = 0x0, rd2 = 0xc
+R[17] = 0xc, R[18] = 0x4, R[19] = 0x8
+a3 = x000xb, we3 = 0, wd3 = 0x0
+mips.WriteData = 0xc, writedata = 0xc
+SrcA = 0x0, SrcB = 0x0, alu.y = 0x00000000, ALUControl = 010
+control.Out = 0x11xb
+dmem.rd = 0x0
+PCSrc = 0b
+ 
+[Error] PC: 0x00000018 Cycle:           7	Expected: [0x00000000]=0xfffffffc, Got: [0x00000000]=0x0000000c
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'cpu_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 744.180 ; gain = 0.000
+current_wave_config {Untitled 7}
+Untitled 7
+add_wave {{/cpu_tb/mips/regfile/R[17]}} 
+current_wave_config {Untitled 7}
+Untitled 7
+add_wave {{/cpu_tb/mips/control/RegWrite}} 
+current_wave_config {Untitled 7}
+Untitled 7
+add_wave {{/cpu_tb/mips/regfile/wd3}} 
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'cpu_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj cpu_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/alu.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/control.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/dmem.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dmem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/imem.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module imem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mips.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mips
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mux2.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mux4.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/pcounter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pcounter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/regfile.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/signext.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module signext
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto a1100814564b4d7b9301ed40ccc30079 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot cpu_tb_behav xil_defaultlib.cpu_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pcounter
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.signext
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.adder
+Compiling module xil_defaultlib.mux2
+Compiling module xil_defaultlib.mux2(DATALEN=5)
+Compiling module xil_defaultlib.mux4
+Compiling module xil_defaultlib.control
+Compiling module xil_defaultlib.mips
+Compiling module xil_defaultlib.imem
+Compiling module xil_defaultlib.dmem
+Compiling module xil_defaultlib.cpu_tb
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 35. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 53. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 118. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 128. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 146. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot cpu_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "cpu_tb_behav -key {Behavioral:sim_1:Functional:cpu_tb} -tclbatch {cpu_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source cpu_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: Simulation object /cpu_tb/summary was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+# log_wave -r /
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+# run 1000ns
+========== Test: test1 ==========
+========== In init ==========
+          7 instructions in total
+========== In runtime checker ==========
+cycle 1: pc = 0x0
+a1 = 00000b, a2 = 10010b, rd1 = 0x0, rd2 = 0x4
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = 10010b, we3 = 1, wd3 = 0x4
+mips.WriteData = 0x4, writedata = 0x4
+SrcA = 0x0, SrcB = 0x4, alu.y = 0x00000004, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0x4
+PCSrc = 0b
+ 
+cycle 2: pc = 0x4
+a1 = 00000b, a2 = 10011b, rd1 = 0x0, rd2 = 0x8
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x8
+a3 = 10011b, we3 = 1, wd3 = 0x8
+mips.WriteData = 0x8, writedata = 0x8
+SrcA = 0x0, SrcB = 0x8, alu.y = 0x00000008, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0x8
+PCSrc = 0b
+ 
+cycle 3: pc = 0x8
+a1 = 00000b, a2 = 10100b, rd1 = 0x0, rd2 = 0x18
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x8
+a3 = 10100b, we3 = 1, wd3 = 0x18
+mips.WriteData = 0x18, writedata = 0x18
+SrcA = 0x0, SrcB = 0x10, alu.y = 0x00000010, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0x18
+PCSrc = 0b
+ 
+cycle 4: pc = 0xc
+a1 = 10010b, a2 = 10011b, rd1 = 0x4, rd2 = 0x8
+R[17] = 0xfffffffc, R[18] = 0x4, R[19] = 0x8
+a3 = 10001b, we3 = 1, wd3 = 0xfffffffc
+mips.WriteData = 0x8, writedata = 0x8
+SrcA = 0x4, SrcB = 0x8, alu.y = 0xfffffffc, ALUControl = 110
+control.Out = 11000b
+dmem.rd = 0xxxxxxxxx
+PCSrc = 0b
+ 
+cycle 5: pc = 0x10
+a1 = 10100b, a2 = 00000b, rd1 = 0x18, rd2 = 0x0
+R[17] = 0xfffffffc, R[18] = 0x4, R[19] = 0x8
+a3 = 00000b, we3 = 1, wd3 = 0x18
+mips.WriteData = 0x0, writedata = 0x0
+SrcA = 0x18, SrcB = 0x0, alu.y = 0x00000018, ALUControl = 110
+control.Out = 11000b
+dmem.rd = 0x0
+PCSrc = 0b
+ 
+cycle 6: pc = 0x14
+a1 = 10010b, a2 = 10011b, rd1 = 0x4, rd2 = 0x8
+R[17] = 0xc, R[18] = 0x4, R[19] = 0x8
+a3 = 10001b, we3 = 1, wd3 = 0xc
+mips.WriteData = 0x8, writedata = 0x8
+SrcA = 0x4, SrcB = 0x8, alu.y = 0x0000000c, ALUControl = 010
+control.Out = 11000b
+dmem.rd = 0xc
+PCSrc = 0b
+ 
+cycle 7: pc = 0x18
+a1 = 00000b, a2 = 10001b, rd1 = 0x0, rd2 = 0xc
+R[17] = 0xc, R[18] = 0x4, R[19] = 0x8
+a3 = x000xb, we3 = 0, wd3 = 0xX
+mips.WriteData = 0xc, writedata = 0xc
+SrcA = 0x0, SrcB = 0x0, alu.y = 0x00000000, ALUControl = 010
+control.Out = 0x11xb
+dmem.rd = 0xc
+PCSrc = 0b
+ 
+[Error] PC: 0x00000018 Cycle:           7	Expected: [0x00000000]=0xfffffffc, Got: [0x00000000]=0x0000000c
+xsim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 762.020 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'cpu_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 762.020 ; gain = 0.000
+current_wave_config {Untitled 8}
+Untitled 8
+add_wave {{/cpu_tb/mips/regfile/R[17]}} 
+current_wave_config {Untitled 8}
+Untitled 8
+add_wave {{/cpu_tb/mips/control/RegWrite}} 
+current_wave_config {Untitled 8}
+Untitled 8
+add_wave {{/cpu_tb/mips/control/PCSrc}} 
+current_wave_config {Untitled 8}
+Untitled 8
+add_wave {{/cpu_tb/mips/control/Op}} 
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'cpu_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj cpu_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/alu.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/control.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/dmem.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dmem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/imem.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module imem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mips.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mips
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mux2.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mux4.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/pcounter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pcounter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/regfile.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/signext.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module signext
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto a1100814564b4d7b9301ed40ccc30079 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot cpu_tb_behav xil_defaultlib.cpu_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pcounter
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.signext
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.adder
+Compiling module xil_defaultlib.mux2
+Compiling module xil_defaultlib.mux2(DATALEN=5)
+Compiling module xil_defaultlib.mux4
+Compiling module xil_defaultlib.control
+Compiling module xil_defaultlib.mips
+Compiling module xil_defaultlib.imem
+Compiling module xil_defaultlib.dmem
+Compiling module xil_defaultlib.cpu_tb
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 35. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 53. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 118. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 128. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 146. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot cpu_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "cpu_tb_behav -key {Behavioral:sim_1:Functional:cpu_tb} -tclbatch {cpu_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source cpu_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: Simulation object /cpu_tb/summary was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+# log_wave -r /
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+# run 1000ns
+========== Test: test1 ==========
+========== In init ==========
+          7 instructions in total
+========== In runtime checker ==========
+cycle 1: pc = 0x0
+a1 = 00000b, a2 = 10010b, rd1 = 0x0, rd2 = 0x4
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = 10010b, we3 = 1, wd3 = 0x4
+mips.WriteData = 0x4, writedata = 0x4
+SrcA = 0x0, SrcB = 0x4, alu.y = 0x00000004, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0x4
+PCSrc = 0b
+ 
+cycle 2: pc = 0x4
+a1 = 00000b, a2 = 10011b, rd1 = 0x0, rd2 = 0x8
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x8
+a3 = 10011b, we3 = 1, wd3 = 0x8
+mips.WriteData = 0x8, writedata = 0x8
+SrcA = 0x0, SrcB = 0x8, alu.y = 0x00000008, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0x8
+PCSrc = 0b
+ 
+cycle 3: pc = 0x8
+a1 = 00000b, a2 = 10100b, rd1 = 0x0, rd2 = 0x18
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x8
+a3 = 10100b, we3 = 1, wd3 = 0x18
+mips.WriteData = 0x18, writedata = 0x18
+SrcA = 0x0, SrcB = 0x10, alu.y = 0x00000010, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0x18
+PCSrc = 0b
+ 
+cycle 4: pc = 0xc
+a1 = 10010b, a2 = 10011b, rd1 = 0x4, rd2 = 0x8
+R[17] = 0xfffffffc, R[18] = 0x4, R[19] = 0x8
+a3 = 10001b, we3 = 1, wd3 = 0xfffffffc
+mips.WriteData = 0x8, writedata = 0x8
+SrcA = 0x4, SrcB = 0x8, alu.y = 0xfffffffc, ALUControl = 110
+control.Out = 11000b
+dmem.rd = 0xxxxxxxxx
+PCSrc = 0b
+ 
+cycle 5: pc = 0x10
+a1 = 10100b, a2 = 00000b, rd1 = 0x18, rd2 = 0x0
+R[17] = 0xfffffffc, R[18] = 0x4, R[19] = 0x8
+a3 = 00000b, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0x0, writedata = 0x0
+SrcA = 0x18, SrcB = 0x0, alu.y = 0xxxxxxxxx, ALUControl = x10
+control.Out = 11000b
+dmem.rd = 0xxxxxxxxx
+PCSrc = 11b
+ 
+cycle 6: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0xfffffffc, R[18] = 0x4, R[19] = 0x8
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 11000b
+dmem.rd = 0xxxxxxxxx
+PCSrc = 0b
+ 
+cycle 7: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0xfffffffc, R[18] = 0x4, R[19] = 0x8
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 11000b
+dmem.rd = 0xxxxxxxxx
+PCSrc = 0b
+ 
+cycle 8: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0xfffffffc, R[18] = 0x4, R[19] = 0x8
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 11000b
+dmem.rd = 0xxxxxxxxx
+PCSrc = 0b
+ 
+cycle 9: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0xfffffffc, R[18] = 0x4, R[19] = 0x8
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 11000b
+dmem.rd = 0xxxxxxxxx
+PCSrc = 0b
+ 
+cycle 10: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0xfffffffc, R[18] = 0x4, R[19] = 0x8
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 11000b
+dmem.rd = 0xxxxxxxxx
+PCSrc = 0b
+ 
+cycle 11: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0xfffffffc, R[18] = 0x4, R[19] = 0x8
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 11000b
+dmem.rd = 0xxxxxxxxx
+PCSrc = 0b
+ 
+cycle 12: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0xfffffffc, R[18] = 0x4, R[19] = 0x8
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 11000b
+dmem.rd = 0xxxxxxxxx
+PCSrc = 0b
+ 
+cycle 13: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0xfffffffc, R[18] = 0x4, R[19] = 0x8
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 11000b
+dmem.rd = 0xxxxxxxxx
+PCSrc = 0b
+ 
+cycle 14: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0xfffffffc, R[18] = 0x4, R[19] = 0x8
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 11000b
+dmem.rd = 0xxxxxxxxx
+PCSrc = 0b
+ 
+cycle 15: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0xfffffffc, R[18] = 0x4, R[19] = 0x8
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 11000b
+dmem.rd = 0xxxxxxxxx
+PCSrc = 0b
+ 
+cycle 16: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0xfffffffc, R[18] = 0x4, R[19] = 0x8
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 11000b
+dmem.rd = 0xxxxxxxxx
+PCSrc = 0b
+ 
+cycle 17: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0xfffffffc, R[18] = 0x4, R[19] = 0x8
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 11000b
+dmem.rd = 0xxxxxxxxx
+PCSrc = 0b
+ 
+cycle 18: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0xfffffffc, R[18] = 0x4, R[19] = 0x8
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 11000b
+dmem.rd = 0xxxxxxxxx
+PCSrc = 0b
+ 
+cycle 19: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0xfffffffc, R[18] = 0x4, R[19] = 0x8
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 11000b
+dmem.rd = 0xxxxxxxxx
+PCSrc = 0b
+ 
+cycle 20: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0xfffffffc, R[18] = 0x4, R[19] = 0x8
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 11000b
+dmem.rd = 0xxxxxxxxx
+PCSrc = 0b
+ 
+cycle 21: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0xfffffffc, R[18] = 0x4, R[19] = 0x8
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 11000b
+dmem.rd = 0xxxxxxxxx
+PCSrc = 0b
+ 
+cycle 22: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0xfffffffc, R[18] = 0x4, R[19] = 0x8
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 11000b
+dmem.rd = 0xxxxxxxxx
+PCSrc = 0b
+ 
+cycle 23: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0xfffffffc, R[18] = 0x4, R[19] = 0x8
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 11000b
+dmem.rd = 0xxxxxxxxx
+PCSrc = 0b
+ 
+cycle 24: pc = 0xxxxxxxxx
+a1 = xxxxxb, a2 = xxxxxb, rd1 = 0xxxxxxxxx, rd2 = 0xxxxxxxxx
+R[17] = 0xfffffffc, R[18] = 0x4, R[19] = 0x8
+a3 = xxxxxb, we3 = 1, wd3 = 0xxxxxxxxx
+mips.WriteData = 0xxxxxxxxx, writedata = 0xxxxxxxxx
+SrcA = 0xxxxxxxxx, SrcB = 0xxxxxxxxx, alu.y = 0xxxxxxxxx, ALUControl = 010
+control.Out = 11000b
+dmem.rd = 0xxxxxxxxx
+PCSrc = 0b
+ 
+xsim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1039.211 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'cpu_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 1039.211 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'cpu_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj cpu_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/alu.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/control.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/dmem.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dmem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/imem.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module imem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mips.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mips
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mux2.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/mux4.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/pcounter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pcounter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/regfile.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.srcs/sources_1/new/signext.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module signext
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto a1100814564b4d7b9301ed40ccc30079 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot cpu_tb_behav xil_defaultlib.cpu_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pcounter
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.signext
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.adder
+Compiling module xil_defaultlib.mux2
+Compiling module xil_defaultlib.mux2(DATALEN=5)
+Compiling module xil_defaultlib.mux4
+Compiling module xil_defaultlib.control
+Compiling module xil_defaultlib.mips
+Compiling module xil_defaultlib.imem
+Compiling module xil_defaultlib.dmem
+Compiling module xil_defaultlib.cpu_tb
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 35. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 53. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 118. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 128. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 146. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot cpu_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "cpu_tb_behav -key {Behavioral:sim_1:Functional:cpu_tb} -tclbatch {cpu_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source cpu_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: Simulation object /cpu_tb/summary was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+# log_wave -r /
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+# run 1000ns
+========== Test: test1 ==========
+========== In init ==========
+          7 instructions in total
+========== In runtime checker ==========
+cycle 1: pc = 0x0
+a1 = 00000b, a2 = 10010b, rd1 = 0x0, rd2 = 0x4
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x0
+a3 = 10010b, we3 = 1, wd3 = 0x4
+mips.WriteData = 0x4, writedata = 0x4
+SrcA = 0x0, SrcB = 0x4, alu.y = 0x00000004, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0x4
+PCSrc = 0b
+ 
+cycle 2: pc = 0x4
+a1 = 00000b, a2 = 10011b, rd1 = 0x0, rd2 = 0x8
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x8
+a3 = 10011b, we3 = 1, wd3 = 0x8
+mips.WriteData = 0x8, writedata = 0x8
+SrcA = 0x0, SrcB = 0x8, alu.y = 0x00000008, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0x8
+PCSrc = 0b
+ 
+cycle 3: pc = 0x8
+a1 = 00000b, a2 = 10100b, rd1 = 0x0, rd2 = 0x18
+R[17] = 0x0, R[18] = 0x4, R[19] = 0x8
+a3 = 10100b, we3 = 1, wd3 = 0x18
+mips.WriteData = 0x18, writedata = 0x18
+SrcA = 0x0, SrcB = 0x10, alu.y = 0x00000010, ALUControl = 010
+control.Out = 10101b
+dmem.rd = 0x18
+PCSrc = 0b
+ 
+cycle 4: pc = 0xc
+a1 = 10010b, a2 = 10011b, rd1 = 0x4, rd2 = 0x8
+R[17] = 0xfffffffc, R[18] = 0x4, R[19] = 0x8
+a3 = 10001b, we3 = 1, wd3 = 0xfffffffc
+mips.WriteData = 0x8, writedata = 0x8
+SrcA = 0x4, SrcB = 0x8, alu.y = 0xfffffffc, ALUControl = 110
+control.Out = 11000b
+dmem.rd = 0xxxxxxxxx
+PCSrc = 0b
+ 
+cycle 5: pc = 0x10
+a1 = 10100b, a2 = 00000b, rd1 = 0x18, rd2 = 0x0
+R[17] = 0xfffffffc, R[18] = 0x4, R[19] = 0x8
+a3 = 00000b, we3 = 1, wd3 = 0x18
+mips.WriteData = 0x0, writedata = 0x0
+SrcA = 0x18, SrcB = 0x0, alu.y = 0x00000018, ALUControl = 010
+control.Out = 11000b
+dmem.rd = 0x0
+PCSrc = 11b
  
 cycle 6: pc = 0x18
 a1 = 00000b, a2 = 10001b, rd1 = 0x0, rd2 = 0xfffffffc
 R[17] = 0xfffffffc, R[18] = 0x4, R[19] = 0x8
-a3 = x000xb, we3 = 0, wd3 = 0x0
+a3 = x000xb, we3 = 0, wd3 = 0xxxxxxxxX
 mips.WriteData = 0xfffffffc, writedata = 0xfffffffc
 SrcA = 0x0, SrcB = 0x0, alu.y = 0x00000000, ALUControl = 010
-control.Out = 0x101x0b
-dmem.rd = 0x0
+control.Out = 0x11xb
+dmem.rd = 0xfffffffc
+PCSrc = 0b
  
 successfully pass runtime checker
 ========== In memory judge ==========
@@ -790,12 +2352,11 @@ successfully pass memory judge
 
 [Done]
 
-$finish called at time : 280 ns : File "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 170
-xsim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 738.672 ; gain = 0.000
+$finish called at time : 280 ns : File "F:/Repos/ICS-Spring20-Fudan/assignment-1/benchtest/cpu_tb.sv" Line 171
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'cpu_tb_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 738.672 ; gain = 0.000
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1039.211 ; gain = 0.000
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
 exit
-INFO: [Common 17-206] Exiting Vivado at Mon Mar 16 18:51:16 2020...
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 17 09:52:24 2020...
