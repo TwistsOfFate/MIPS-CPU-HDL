@@ -10,4 +10,3 @@
 # Journal file: F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
 source F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.sim/sim_1/behav/xsim/xsim.dir/cpu_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Mon Mar 16 18:42:24 2020...
