@@ -39,14 +39,14 @@ module control(
     
     always_comb
         case (Op)
-            6'b000000: {Out, ALUOp} <= 'b1_01_000X_011;   //R-type
-            6'b100011: {Out, ALUOp} <= 'b1_00_1011_010;   //lw
-            6'b101011: {Out, ALUOp} <= 'b0_XX_11X1_010;   //sw
-            6'b000100: {Out, ALUOp} <= 'b0_XX_00X1_110;   //beq
-            6'b001000: {Out, ALUOp} <= 'b1_00_1001_010;   //addi
-            6'b000010: {Out, ALUOp} <= 'b0_XX_X0XX_XXX;   //jump
+            6'b000000: {Out, ALUOp} <= 'b1_01_000X_011;     //R-type
+            6'b100011: {Out, ALUOp} <= 'b1_00_1011_010;     //lw
+            6'b101011: {Out, ALUOp} <= 'b0_XX_11X1_010;     //sw
+            6'b000100: {Out, ALUOp} <= 'b0_XX_00X1_110;     //beq
+            6'b001000: {Out, ALUOp} <= 'b1_00_1001_010;     //addi
+            6'b000010: {Out, ALUOp} <= 'b0_XX_X0XX_XXX;     //jump
             6'b000101: {Out, ALUOp} <= 'b0_XX_00X1_110;     //bne
-            6'b000011: {Out, ALUOp} <= 'b1_10_X0XX_XXX;   //jal
+            6'b000011: {Out, ALUOp} <= 'b1_10_X0XX_XXX;     //jal
             6'b001010: {Out, ALUOp} <= 'b1_00_1001_111;     //slti
             6'b001100: {Out, ALUOp} <= 'b1_00_1000_000;     //andi
             6'b001011: {Out, ALUOp} <= 'b1_00_1000_001;     //ori
@@ -54,7 +54,7 @@ module control(
         endcase
     
     always_comb
-        casex ({ALUOp, Funct})
+        case ({ALUOp, Funct})
             9'b011_100000: ALUControl <= 3'b010;     //add
             9'b011_100010: ALUControl <= 3'b110;     //subtract
             9'b011_100100: ALUControl <= 3'b000;     //and

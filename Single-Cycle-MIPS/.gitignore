@@ -85,3 +85,11 @@
 !*.elf
 !*.bmm
 !*.xmp
+#########
+#Benchtests
+#########
+!/benchtest/*
+#########
+#Makefile
+#########
+!makefile
