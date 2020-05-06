@@ -1,4 +1,4 @@
-`define PATH_PREFIX "F:/Repos/ICS-Spring20-Fudan/assignment-1/"
+`define PATH_PREFIX "../../../../"
 `define NAME "benchtest/"
 
 module cpu_tb();
@@ -149,12 +149,12 @@ endtask
 initial
 begin
     clk = 1'b0;
-    grader("ad hoc");
-    grader("factorial");
-    grader("bubble sort");
-    grader("gcd");
-    grader("quick multiply");
-    grader("bisection");
+//    grader("ad hoc");
+//    grader("factorial");
+//    grader("bubble sort");
+//    grader("gcd");
+//    grader("quick multiply");
+//    grader("bisection");
   $display("[Done]\n");
   $finish;
 end

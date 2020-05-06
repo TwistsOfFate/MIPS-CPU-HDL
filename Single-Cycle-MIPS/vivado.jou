@@ -2,16 +2,25 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Sat Apr  4 09:40:45 2020
-# Process ID: 16808
+# Start of session at: Mon Apr  6 18:17:11 2020
+# Process ID: 26844
 # Current directory: F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18176 F:\Repos\MIPS-CPU-HDL\Single-Cycle-MIPS\Single-Cycle-MIPS.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent34256 F:\Repos\MIPS-CPU-HDL\Single-Cycle-MIPS\Single-Cycle-MIPS.xpr
 # Log file: F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/vivado.log
 # Journal file: F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project F:/Repos/MIPS-CPU-HDL/Single-Cycle-MIPS/Single-Cycle-MIPS.xpr
 update_compile_order -fileset sources_1
-launch_simulation
-source cpu_tb.tcl
-run all
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+open_run impl_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+close_design
+open_run synth_1 -name synth_1
+create_clock -period 40.000 -name clk -waveform {0.000 20.000}
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
